@@ -20,13 +20,10 @@ enum SortType {
   length,
 }
 
-// const SORT_FIELD_ALPHABETIC = 'alphabetic';
-// const SORT_FIELD_LENGTH = 'length';
-
 function getPreperedGoods(
   goods: string[],
   sortField: SortType | '',
-  isReserved: boolean,
+  isReversed: boolean,
 ) {
   const prepearedGoods = [...goods];
 
@@ -45,7 +42,7 @@ function getPreperedGoods(
     });
   }
 
-  if (isReserved) {
+  if (isReversed) {
     prepearedGoods.reverse();
   }
 
